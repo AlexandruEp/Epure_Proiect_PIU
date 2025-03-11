@@ -10,16 +10,84 @@ namespace InchirieriAuto
     {
         static void Main()
         {
-            //Instantierea unui obiect de tip Masina, folisind constructorul cu parametri
+            Masina masinaNoua = new Masina();
+            string opt;
 
-            Masina m1 = new Masina("Dacia Logan", "1.4 Benzina", 2008);
-            string entitate1 = m1.Info();
-            Console.WriteLine(entitate1);
+            do
+            {
+                Console.WriteLine("\nMENIU: ");
+                Console.WriteLine("C. Citire masina de la tastatura");
+                Console.WriteLine("A. Afisare ultima masina introdusa");
+                Console.WriteLine("W. Afisare date masina dupa model");
+                Console.WriteLine("X. Inchidere program");
 
-            //Instantierea unui obiect de tip Client, folisind constructorul cu parametri
-            Client c1 = new Client("Popescu Tudor", "popescutudor@gmail.com", "5000101123456", "+40723123456");
-            string entitate2 = c1.Info();
-            Console.WriteLine(entitate2);
+                Console.WriteLine("Alegeti o optiune: ");
+                opt = Console.ReadLine();
+
+                switch (opt.ToUpper())
+                {
+                    case "C":
+                        masinaNoua = CitireMasinaTastatura();
+                        break;
+                    case "A":
+                        AfisareMasinaTastatura(masinaNoua);
+                        break;
+                    case "W":
+                        IdentificareDupaNume(masinaNoua);
+                        break;
+                    case "X":
+                        return;
+                    default:
+                        Console.WriteLine("Optiune inexistenta");
+                        break;
+                }
+            } while (true);
+            
+        }
+
+        public static Masina CitireMasinaTastatura()
+        {
+            Console.WriteLine("Introduceti modelul: ");
+            string nume = Console.ReadLine();
+
+            Console.WriteLine("Introduceti tipul combustibilului: ");
+            string combustibil = Console.ReadLine();
+
+            Console.WriteLine("Introduceti anul fabricatiei: ");
+            int anFabricatie;
+            while (!int.TryParse(Console.ReadLine(), out anFabricatie))
+            {
+                Console.WriteLine("Anul trebuie sa fie un numar! Introduceti din nou: ");
+            }
+
+           return new Masina(nume, combustibil, anFabricatie);
+        
+        }
+
+        public static void AfisareMasinaTastatura(Masina masina)
+        {
+            if (string.IsNullOrEmpty(masina.model))
+            {
+                Console.WriteLine("Nu exista nicio masina introdusa!");
+                return;
+            }
+
+            Console.WriteLine($"Model: {masina.model}, Combustibil: {masina.tip_combustibil}, An: {masina.an_fabricatie}");
+        }
+
+        public static void IdentificareDupaNume(Masina masina)
+        {
+            Console.WriteLine("Introduceti un model: ");
+            string model1 = Console.ReadLine();
+
+            if (model1 == masina.model)
+            {
+                Console.WriteLine($"Modelul {masina.model} functioneaza pe {masina.tip_combustibil}");
+            }
+            else
+            {
+                Console.WriteLine("Modelul introdus nu corespune");
+            }
         }
     }
 }
