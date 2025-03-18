@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InchirieriAuto", "InchirieriAuto\InchirieriAuto.csproj", "{235F4846-C32C-4674-BC39-72FEF34E1B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarieModele", "LibrarieModeleNou1\LibrarieModele.csproj", "{922BFA92-1BCF-4E52-9D84-AB3C84CBC971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NivelStocareDate", "NivelStocareDateNou\NivelStocareDate.csproj", "{B640B378-B1D2-4AE2-B7EC-21A2989CB1E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{235F4846-C32C-4674-BC39-72FEF34E1B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{235F4846-C32C-4674-BC39-72FEF34E1B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{235F4846-C32C-4674-BC39-72FEF34E1B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922BFA92-1BCF-4E52-9D84-AB3C84CBC971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922BFA92-1BCF-4E52-9D84-AB3C84CBC971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922BFA92-1BCF-4E52-9D84-AB3C84CBC971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922BFA92-1BCF-4E52-9D84-AB3C84CBC971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B640B378-B1D2-4AE2-B7EC-21A2989CB1E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B640B378-B1D2-4AE2-B7EC-21A2989CB1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B640B378-B1D2-4AE2-B7EC-21A2989CB1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B640B378-B1D2-4AE2-B7EC-21A2989CB1E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

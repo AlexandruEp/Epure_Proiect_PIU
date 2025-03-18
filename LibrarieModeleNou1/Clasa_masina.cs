@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InchirieriAuto
+namespace LibrarieModele
 {
-    class Masina
+   public class Masina
     {
  
            public string model { get; set; }
